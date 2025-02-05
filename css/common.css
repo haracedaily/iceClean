@@ -235,6 +235,7 @@ footer section li {
     font-size:1.5rem;
     font-family:'런드리고딕B';
     color:white;
+    z-index:99;
 }
 .fix_btn:hover{
     background-color: #85c6ff;
