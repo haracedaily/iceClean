@@ -1,6 +1,6 @@
 @font-face { 
     font-family: "MapleBold";
-    src: url("../font/SOYO\ Maple\ Bold.ttf") format("truetype");
+    src: url("../font/SOYO_Maple_Bold.ttf") format("truetype");
     font-weight: normal;
   }
   @font-face{
@@ -22,12 +22,12 @@
     }
     @font-face { 
         font-family: "런드리고딕B";
-        src: url("../font/런드리고딕OTF\ Bold.otf") format("truetype");
+        src: url("../font/런드리고딕OTF_Bold.otf") format("truetype");
         font-weight: normal;
       }
       @font-face { 
         font-family: "런드리고딕R";
-        src: url("../font/런드리고딕OTF\ Regular.otf") format("truetype");
+        src: url("../font/런드리고딕OTF_Regular.otf") format("truetype");
         font-weight: normal;
       }
 
@@ -43,14 +43,15 @@
     /* font-family:'DNFForgedBlade'; */
     /* font-family:'MapleBold'; */
     font-family:'런드리고딕R';
+    text-decoration: none;
 }
 body{
     display:flex;
     flex-direction: column;
-
+    min-height: 100vh;
 }
 body>main{
-    padding-top:10vh;
+    padding-top:9.5vh;
     flex: 1;
     min-height:0;
 
@@ -59,7 +60,7 @@ body header{
     position:fixed;
     top:0;
     width:100%;
-    flex-basis: 10vh;
+    flex-basis: 9vh;
     z-index:100;
    /*  background-image: url(../image/얼음1.svg);
     background-size: cover;
@@ -82,8 +83,32 @@ header nav>div>ul>li {
     font-size: 1.5rem;
     overflow: visible;
     position:relative;
+    padding:0.5rem;
 }
-
+header nav>div>ul>li:first-child {
+    width:20vw;
+}
+header nav>div>ul>li:first-child:hover {
+    cursor:pointer;
+}
+/*header nav>div>ul>li:first-child a:hover img{
+    background-color: rgba(60,200,255,1);
+}*/
+header nav>div>ul>li:first-child a:visited {
+    color:black;
+}
+header nav>div>ul>li:first-child a:visited:hover {
+    color: rgba(60,200,255,1);
+}
+/*header nav>div>ul>li:first-child a:visited:hover img{
+    background-color: rgba(60,200,255,1);
+}*/
+header nav>div>ul>li:first-child a:visited:active {
+    color: rgba(60,255,200,1);
+}
+/*header nav>div>ul>li:first-child a:visited:active img{
+    background-color: rgba(60,255,200,1);
+}*/
 @keyframes fadeIn {
     0%{
         transform: translateY(0);
@@ -107,6 +132,8 @@ header nav .subMenu{
     left:0;
     min-width: 150px;
     background-color: white;
+    border-radius: 15px;
+    border: 0.5px solid black;
 }
 header nav .subMenu a{
     display:inline-block;
@@ -116,14 +143,13 @@ header nav .subMenu a{
     padding-right:auto;
     width:100%;
     padding:5px;
-   
 }
 header nav .subMenu a:hover{
-    background-color: rgba(60,200,255,0.2);
-}
-
-header nav li:hover {
+    color: rgba(60,200,255,1);
     cursor:pointer;
+}
+header nav li:hover{
+    color: rgba(60,200,255,1);
 }
 
 header nav li:hover > .subMenu{
@@ -235,6 +261,7 @@ footer section li {
     font-size:1.5rem;
     font-family:'런드리고딕B';
     color:white;
+    z-index:99;
 }
 .fix_btn:hover{
     background-color: #85c6ff;
