@@ -1,0 +1,13 @@
+main{
+    display:flex;
+    justify-content: center;
+}
+main .container{
+    width:70%;
+}
+main .container .con_head ul{
+    display:flex;
+}
+main .container .con_head li{
+    width:min(10%, 180px);
+}
