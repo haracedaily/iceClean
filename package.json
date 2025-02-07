@@ -1,14 +1,23 @@
 {
+<<<<<<< HEAD
   "name": "mini_project02",
   "version": "1.0.0",
   "description": "제빙기 청소 웹사이트\r jh가 작업함",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+=======
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+>>>>>>> mh
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+<<<<<<< HEAD
   "dependencies": {
     "prettier": "^3.3.1",
     "vite": "^5.1.6"
@@ -24,4 +33,9 @@
     "url": "https://github.com/haracedaily/iceClean/issues"
   },
   "homepage": "https://github.com/haracedaily/iceClean#readme"
+=======
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+>>>>>>> mh
 }
