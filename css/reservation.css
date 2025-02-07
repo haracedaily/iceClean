@@ -24,6 +24,10 @@ height=>안에 있는 img랑 동일하게 줌
 
 #container>#content>#img_main>#img_text{
     position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
     color: white;
     top: 200px;
     left: 10%;
@@ -39,18 +43,17 @@ height=>안에 있는 img랑 동일하게 줌
     animation: motion 0.75s linear 0s infinite alternate;
 }
 
-#container>#sub_content{
-    position: relative;
-}
-
 #container>#sub_content>#sub_choice{
     position: absolute;
     left: 10%;
+    margin-top: 30px;
 }
-/*#container>#sub_content>#sub_order{*/
-/*    position: absolute;*/
-/*    left: 10%;*/
-/*}*/
+
+#container#sub_content>#sub_order{
+    position: absolute;
+    left: 10%;
+    margin-top: 50px;
+}
 
 @keyframes motion{
     0%{margin-top: 0px;}
