@@ -17,7 +17,7 @@ main .container .con_head li{
     width:min(10%, 180px);
     text-align:center;
 }
-main .container .con_head li:nth-child(3){
+main .container .con_head li:nth-child(2){
     color:rgb(60,200,255);
 }
 
