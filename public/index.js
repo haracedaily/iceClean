@@ -13,7 +13,7 @@ gsap.to("#subImg1", {//타겟 되는 요소
         end:"bottom bottom", // 애니메이션 종료시점
         scrub: 2
     },
-    y: -200,duration:2,opacity:1
+   duration:2,opacity:1
 
 });
 
@@ -24,7 +24,7 @@ gsap.to("#subImg2", {
         end:"center center",
         scrub: 2
     },
-    y: -250,duration:2,opacity:1
+    duration:2,opacity:1
 });
 
 gsap.to("#subImg3", {
@@ -34,5 +34,5 @@ gsap.to("#subImg3", {
         end:"center center",
         scrub: 2
     },
-    y: -80,duration:2,opacity:1
+    duration:2,opacity:1
 });

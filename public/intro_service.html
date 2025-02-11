@@ -14,10 +14,20 @@
             <div class="con_head">
                 <ul>
                     <li>회사소개</li>
-                    <li>연혁</li>
-                    <li>서비스 설명</li>
+                    <li onclick="location.href='/history.html'" class="curHeader">연혁</li>
+                    <li onclick="location.href='/intro_service.html'" class="curHeader">서비스 설명</li>
                 </ul>
             </div>
+            <section id="main_img" style="background-color:white; position:relative;">
+                <div style="position:absolute; top:40%; z-index:99; left:45%; display:flex; flex-direction: column; justify-content: center;">
+                    <h1>Company Introduction</h1>
+                    <h2>회사소개</h2>
+                </div>
+                <img src="/image/dia_background.png" width="100%" alt="" style="height:50vh; opacity:0.6; z-index:-1;">
+            </section>
+            <section id="main_content">
+                서비스 설명
+            </section>
         </div>
         <div>
            <button class="fix_btn">청소 예약하기</button>
