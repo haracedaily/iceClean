@@ -13,16 +13,15 @@
     opacity: 0.8;
 }
 
-#container > #content > #img_main > #img_text {
+.img_text {
     position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 0;
     color: white;
-    top: 200px;
-    left: 80px;
-    line-height: 70px;
+    /*font-size: clamp(16px, 2vw, 40px);*/
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    white-space: nowrap;
+translate(50 px, 0);
 }
 
 .down_img {
@@ -36,31 +35,27 @@
 
 #container > #sub_content {
     position: relative;
-    height: 40vh;
+    height: 300px;
 }
 
-.sub_detail {
-    position: absolute;
-    width: 30%;
+#container > #img_slider{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
-.sub_choice {
-    position: absolute;
-    left: 80px;
-    margin-top: 50px;
+.sub_review{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    animation: bannermove 0.75s linear;
 }
 
-.sub_order {
-    position: absolute;
-    left: 80px;
-    margin-top: 150px;
-}
-
-.sub_customer {
-    position: absolute;
-    display: inline-block;
-    left: 200px;
-    margin-top: 150px;
+.sub_review > div {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes motion {
@@ -72,50 +67,39 @@
     }
 }
 
-@media screen and (max-width: 750px) {
-    #container > #content > #img_main > #img_text {
-        font-size: 1.5rem;
+@keyframes bannermove {
+    0%{
+        transform: translate(0,0);
     }
-
-    .clean_btn {
-        background-color: #1481e0;
-        color: white;
-        font-family: '런드리고딕B';
-        font-size: 1.2rem;
-        border: 2px solid #1481e0;
-        border-radius: 5px;
-        width: 70%;
-        height: 50px;
-        top: 45vh;
-        left: 80px;
-        position: absolute;
-    }
-
-    .clean_btn:hover {
-        background-color: #85c6ff;
-        cursor: pointer;
+    100%{
+        transform: translate(-50%, 0);
     }
 }
 
-@media screen and (min-width: 751px) {
-    #container > #content > #img_main > #img_text {
-        font-size: 1.5rem;
-        left: 150px;
+@media screen and (max-width: 750px) {
+    .img_text {
+        position: absolute;
+        transform: translateX(28%);
+        top: 30%;
+        line-height: 1.5;
+        font-size: clamp(21px, 2.5vw, 40px);
+        background: rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+        color: white;
     }
 
     .clean_btn {
+        position: absolute;
         background-color: #1481e0;
         color: white;
         font-family: '런드리고딕B';
         font-size: 1.2rem;
         border: 2px solid #1481e0;
         border-radius: 5px;
-        width: 300px;
+        transform: translateX(20%);
+        top: 70%;
+        width: 70%;
         height: 50px;
-        top: 45vh;
-        left: 150px;
-        right: 10%;
-        position: absolute;
     }
 
     .clean_btn:hover {
@@ -124,17 +108,75 @@
     }
 
     .sub_choice {
-        font-size: 1.2rem;
-        left: 150px;
+        position: absolute;
+        left: 80px;
+        padding-top: 50px;
+        font-size: clamp(21px, 2.5vw, 40px);
     }
 
     .sub_order {
-        font-size: 1.2rem;
-        left: 150px;
+        position: absolute;
+        left: 80px;
+        padding-top: 180px;
+        font-size: clamp(21px, 2.5vw, 40px);
     }
 
     .sub_customer {
+        position: absolute;
+        display: inline-block;
+        left: 250px;
+        padding-top: 180px;
+        font-size: clamp(21px, 2.5vw, 40px);
+    }
+}
+
+@media screen and (min-width: 751px) {
+    .img_text {
+        position: absolute;
+        transform: translateX(20%);
+        top: 20%;
+        font-size: clamp(18px, 2.5vw, 36px);
+        white-space: nowrap;
+    }
+
+    .clean_btn {
+        position: absolute;
+        background-color: #1481e0;
+        color: white;
+        font-family: '런드리고딕B';
         font-size: 1.2rem;
+        border: 2px solid #1481e0;
+        border-radius: 5px;
+        width: 300px;
+        height: 50px;
+        transform: translateX(40%);
+        top: 75%;
+    }
+
+    .clean_btn:hover {
+        background-color: #85c6ff;
+        cursor: pointer;
+    }
+
+    .sub_choice {
+        position: absolute;
+        left: 80px;
+        padding-top: 50px;
+        font-size: clamp(21px, 2.5vw, 25px);
+    }
+
+    .sub_order {
+        position: absolute;
+        left: 80px;
+        padding-top: 180px;
+        font-size: clamp(21px, 2.5vw, 25px);
+    }
+
+    .sub_customer {
+        position: absolute;
+        display: inline-block;
         left: 300px;
+        padding-top: 180px;
+        font-size: clamp(21px, 2.5vw, 25px);
     }
 }
