@@ -6,9 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/reservation.css">
+    <script src="/js/reservation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/582d1bfdc8.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div data-include-path="header.html" class="$includePath"></div>
@@ -48,13 +55,25 @@
 
         <div id="img_slider">
             <div class="sub_review">
-                <div><img src="/image/ssy_review01.png" alt="" id="review01"></div>
-                <div><img src="/image/ssy_review02.png" alt="" id="review02"></div>
-                <div><img src="/image/ssy_review03.png" alt="" id="review03"></div>
-                <div><img src="/image/ssy_review04.png" alt="" id="review04"></div>
-                <div><img src="/image/ssy_review05.png" alt="" id="review05"></div>
-                <div><img src="/image/ssy_review06.png" alt="" id="review06"></div>
-                <div><img src="/image/ssy_review07.png" alt="" id="review07"></div>
+                <div class="sub_review_text">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="review_text">
+                        <h3><span style="color: grey;">후기</span></h3>
+                        <h1>실제 후기 살펴 볼까요?</h1>
+                        <h3><span style="color: grey;">5점 만점에</span> <span style="font-weight: bold">4.8점</span></h3>
+                    </div>
+                    <div class="img_re"><img src="/image/ssy_review01.png" alt="" id="review01"></div>
+                    <div class="img_re"><img src="/image/ssy_review02.png" alt="" id="review02"></div>
+                    <div class="img_re"><img src="/image/ssy_review03.png" alt="" id="review03"></div>
+                    <div class="img_re"><img src="/image/ssy_review04.png" alt="" id="review04"></div>
+                    <div class="img_re"><img src="/image/ssy_review05.png" alt="" id="review05"></div>
+                    <div class="img_re"><img src="/image/ssy_review06.png" alt="" id="review06"></div>
+                    <div class="img_re"><img src="/image/ssy_review07.png" alt="" id="review07"></div>
+
+
+                </div>
             </div>
         </div>
     </div>
@@ -86,5 +105,5 @@
 </script>
 </body>
 <script type="module" src="/js/common.js"></script>
-<script src="/js/reservation.js"></script>
+
 </html>
