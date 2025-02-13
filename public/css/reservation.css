@@ -38,6 +38,16 @@ translate(50 px, 0);
     height: 300px;
 }
 
+#container>#service_menu{
+    position: relative;
+    height: 400px;
+    background-color: lightskyblue;
+}
+
+.service_div{
+    display: flex;
+}
+
 #container > #img_slider {
     position: relative;
     overflow: hidden;
@@ -139,6 +149,22 @@ translate(50 px, 0);
         left: 230px;
         padding-top: 150px;
         font-size: clamp(15px, 2vw, 40px);
+    }
+
+    .service_div1{
+        width: 500px;
+        height: 500px;
+        background-color: darkgrey;
+    }
+    .service_div2{
+        width: 500px;
+        height: 500px;
+        background-color: darkseagreen;
+    }
+    .service_div3{
+        width: 500px;
+        height: 500px;
+        background-color: darkgrey;
     }
 }
 
