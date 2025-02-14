@@ -207,9 +207,9 @@ footer{
     background-color: #313131;
     
 }
-footer nav{
+/*footer nav{
     padding-left:10vw;
-}
+}*/
 footer nav ul{
 
     display:flex;
@@ -220,6 +220,9 @@ footer nav li{
     font-size:0.6rem;
     color:#CACACA;
 }
+footer nav li:hover{
+    cursor: pointer;
+}
 footer hr{
     background:#464646;
     height:1px;
@@ -228,7 +231,7 @@ footer hr{
 }
 footer section{
     padding:8px;
-    padding-left:10vw;
+    /*padding-left:10vw;*/
     color:white;
     font-size:0.7rem;
 }
@@ -236,8 +239,59 @@ footer section li {
     padding:1.5px;
     margin:5px;
 }
+.scroll_lock{
+    overflow:hidden;
+    touch-action:none;
+}
+#pop_up {
+    display:none;
+}
+#pop_up_content{
+    display:flex;
+    flex-direction: column;
+    padding:3%;
+    background-color:white;
+    width:40%;
+    margin:auto;
+    border-radius:10px;
+    box-shadow: 1px 1px 3px #35A4FF;
+    align-items: center;
+    gap:10px;
+}
+#popup_context{
+    position:relative;
+}
+#popup_arrow_btn{
+    position:absolute;
+    top:calc(-5% - 20px);
+    right:calc(-3% - 5px);
+}
+.popup_arrow_btn:hover{
+    background-color:rgba(33,164,255,0.8);
+    color:white;
+}
+.popup_arrow_btn{
+    border-radius:5px;
+    padding:2px;
+    background-color:#35A4FF;
+    color:black;
+    font-size:0.7rem;
+}
+#pop_up_close_btn{
+    border-radius:10px;
+    width:30%;
+    border:none;
+    padding:calc(1% + 0.3rem);
+}
+#pop_up_close_btn:hover{
+    cursor: pointer;
+}
+#pop_up_text{
+    max-height:60vh;
+    overflow:auto;
 
-
+}
+/*화면 크기별 설정*/
 @media screen and (max-width:750px){
     header nav>div>ul>li {
         margin-right: 10px;
@@ -277,6 +331,7 @@ footer section li {
 }
 .fix_btn:hover{
     background-color: #85c6ff;
+    cursor:pointer;
 }
 #google-translate-element:active{
     padding-top:30px;
@@ -302,6 +357,11 @@ footer section li {
         font-size:0.4rem;
         color:#CACACA;
     }
+
+    footer nav li:hover{
+        cursor: pointer;
+    }
+
     footer section{
         padding:8px;
         padding-left:10vw;
