@@ -38,14 +38,35 @@ translate(50 px, 0);
     height: 300px;
 }
 
-#container>#service_menu{
+#container > #service_menu {
     position: relative;
     height: 400px;
-    background-color: lightskyblue;
+    background-color: rgb(245, 245, 245);
 }
 
-.service_div{
+.service_title {
+    padding: 20px;
+}
+
+#container > #service_menu > .service_div > div {
+    margin: 10px 10px;
+}
+
+.service_div {
     display: flex;
+}
+
+#container > #service_menu > .service_div > div > div > img {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+.sub_service_calendar,
+.sub_service_glasses,
+.sub_service_evaluation {
+    margin: 10px 10px;
+    height: 80px;
 }
 
 #container > #img_slider {
@@ -60,7 +81,7 @@ translate(50 px, 0);
     width: 100%;
 }
 
-.sub_review_div{
+.sub_review_div {
     background-color: rgb(245, 245, 245);
 }
 
@@ -151,20 +172,28 @@ translate(50 px, 0);
         font-size: clamp(15px, 2vw, 40px);
     }
 
-    .service_div1{
+    .service_calendar {
         width: 500px;
-        height: 500px;
-        background-color: darkgrey;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
     }
-    .service_div2{
+
+    .service_glasses {
         width: 500px;
-        height: 500px;
-        background-color: darkseagreen;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
     }
-    .service_div3{
+
+    .service_evaluation {
         width: 500px;
-        height: 500px;
-        background-color: darkgrey;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
     }
 }
 
@@ -217,7 +246,32 @@ translate(50 px, 0);
         font-size: clamp(15px, 2vw, 20px);
     }
 
-    .sub_review_div{
+    .service_div {
+        width: 800px;
         margin: auto;
+    }
+
+    .service_calendar {
+        width: 500px;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
+    }
+
+    .service_glasses {
+        width: 500px;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
+    }
+
+    .service_evaluation {
+        width: 500px;
+        height: 200px;
+        background-color: white;
+        border: 5px solid dimgray;
+        border-radius: 10px;
     }
 }
