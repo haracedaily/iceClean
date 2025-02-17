@@ -71,10 +71,15 @@ translate(50 px, 0);
 
 .price_title {
     padding: 20px;
+    white-space: nowrap;
 }
 
 .price_table {
     padding: 20px;
+}
+
+thead {
+    background-color: rgb(210, 210, 210);
 }
 
 table, th, td {
@@ -82,9 +87,67 @@ table, th, td {
     padding: 20px;
     border-collapse: collapse;
     border: 1px solid rgb(190, 190, 190);
-    height: 80px;
+    height: 70px;
     white-space: nowrap;
 }
+
+#container > #service_trust {
+    height: 350px;
+    background-color: rgb(245, 245, 245);
+}
+
+.trust_title {
+    padding: 20px;
+}
+
+.trust_div {
+    display: flex;
+    white-space: nowrap;
+    padding: 50px 20px;
+    gap: 40px;
+    width: 800px;
+    margin: auto;
+}
+
+/*.trust_payment,*/
+/*.trust_insurance,*/
+/*.trust_customer {*/
+/*    margin: 10px 10px;*/
+/*    height: 80px;*/
+/*}*/
+
+.trust_payment {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border: 5px solid dimgray;
+    border-radius: 10px;
+}
+
+.trust_insurance {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border: 5px solid dimgray;
+    border-radius: 10px;
+}
+
+.trust_customer {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border: 5px solid dimgray;
+    border-radius: 10px;
+}
+
+.payment,
+.insurance,
+.customer {
+    width: 50px;
+    height: 50px;
+    
+}
+
 
 #container > #img_slider {
     position: relative;
@@ -212,6 +275,15 @@ table, th, td {
         border: 5px solid dimgray;
         border-radius: 10px;
     }
+
+    table, th, td {
+        text-align: center;
+        padding: 20px;
+        border-collapse: collapse;
+        border: 1px solid rgb(190, 190, 190);
+        height: 70px;
+        white-space: nowrap;
+    }
 }
 
 @media screen and (min-width: 751px) {
@@ -290,5 +362,9 @@ table, th, td {
         background-color: white;
         border: 5px solid dimgray;
         border-radius: 10px;
+    }
+
+    #container > #service_price {
+        display: flex;
     }
 }
