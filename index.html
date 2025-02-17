@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollSmoother.min.js"></script>-->
 </head>
 <body>
@@ -49,6 +50,7 @@
          function layout(){ DOM
          }
           | window*/
+        let $bodyEl = document.querySelector('body');
         window.addEventListener("load",function(){
             let allElements = document.getElementsByClassName('$includePath');
             let includePath;
@@ -67,7 +69,11 @@
                 }
             });
         });
-        function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages : 'ko,en,jp',autoDisplay: false}, 'lang');}
+
+        function closePopUp(){
+            $bodyEl.classList.remove("scroll_lock");
+            document.querySelector('#pop_up').style.display = 'none';
+        }
     </script>
 </body>
 <script type="module" src="/public/js/common.js"></script>

@@ -8,7 +8,7 @@ gsap.to("#arrow_img", {//타겟 되는 요소
         end:"bottom 100", // 애니메이션 종료시점
         scrub: 2
     },
-    duration:1,height:"700"
+    duration:0.4,height:"700"
 });
 
 gsap.to("#history1", {
@@ -18,7 +18,7 @@ gsap.to("#history1", {
         end:"-50 100",
         scrub: 2
     },
-    duration:1,opacity:1
+    duration:0.4,opacity:1
 });
 
 gsap.to("#history1_line", {
@@ -28,7 +28,7 @@ gsap.to("#history1_line", {
         end:"-50 100",
         scrub: 2
     },
-    duration:1,width:"20"
+    duration:0.4,width:"20"
 });
 
 gsap.to("#history2", {
@@ -38,7 +38,7 @@ gsap.to("#history2", {
         end:"50 100",
         scrub: 2
     },
-    duration:1,opacity:1
+    duration:0.4,opacity:1
 });
 
 gsap.to("#history2_line", {
@@ -48,7 +48,17 @@ gsap.to("#history2_line", {
         end:"50 100",
         scrub: 2
     },
-    duration:1,width:"20"
+    duration:0.4,width:"20"
+});
+
+gsap.to("#profile_img", {
+    scrollTrigger: {
+        trigger: "#profile_img",
+        start: "-400 200",
+        end:"50 100",
+        scrub: 2
+    },
+    duration:0.4,opacity:1
 });
 
 gsap.to("#history3", {
@@ -58,7 +68,7 @@ gsap.to("#history3", {
         end:"100 100",
         scrub: 2
     },
-    duration:1,opacity:1
+    duration:0.4,opacity:1
 });
 
 gsap.to("#history3_line", {
@@ -68,7 +78,7 @@ gsap.to("#history3_line", {
         end:"100 100",
         scrub: 2
     },
-    duration:1,width:"20"
+    duration:0.4,width:"20"
 });
 
 gsap.to("#history4", {
@@ -78,7 +88,7 @@ gsap.to("#history4", {
         end:"150 100",
         scrub: 2
     },
-    duration:1,opacity:1
+    duration:0.4,opacity:1
 });
 
 gsap.to("#history4_line", {
@@ -88,5 +98,6 @@ gsap.to("#history4_line", {
         end:"150 100",
         scrub: 2
     },
-    duration:1,width:"20"
+    duration:0.4,width:"20"
 });
+
