@@ -1,3 +1,7 @@
+#container{
+    width: 100%;
+    height: 100%;
+}
 #container > #content > #img_main {
     position: relative;
     overflow: hidden;
@@ -46,6 +50,8 @@ translate(50 px, 0);
 
 .service_title {
     padding: 20px;
+    width: 800px; /*수정1*/
+    margin: auto; /*수정1*/
 }
 
 #container > #service_menu > .service_div > div {
@@ -67,6 +73,10 @@ translate(50 px, 0);
 .sub_service_evaluation {
     margin: 10px 10px;
     height: 80px;
+}
+.price_div{
+    width: 800px;
+    margin: auto;
 }
 
 .price_title {
@@ -147,7 +157,6 @@ table, th, td {
     height: 50px;
 
 }
-
 
 #container > #img_slider {
     position: relative;
