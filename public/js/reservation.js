@@ -10,3 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
         },
     });
 });
+
+document.querySelector(".clean_btn").addEventListener("click", function() {
+    location.href="/reservation.html";
+})
