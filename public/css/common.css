@@ -291,6 +291,9 @@ footer section li {
     overflow:auto;
 
 }
+.none{
+    display:none;
+}
 /*화면 크기별 설정*/
 @media screen and (max-width:750px){
     header nav>div>ul>li {
