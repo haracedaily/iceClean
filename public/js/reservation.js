@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("show"); // 요소가 보이면 show 추가
+                entry.target.classList.add("show");
             }
         });
-    }, { threshold: 0.3 }); // 30% 이상 보이면 동작
+    }, { threshold: 0.3 });
 
-    // 감지할 요소 선택
     const elements = document.querySelectorAll(".hidden");
     elements.forEach(el => observer.observe(el));
 });
