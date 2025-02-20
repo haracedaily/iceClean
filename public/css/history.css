@@ -35,6 +35,9 @@ main .container .con_head li:first-child{
     align-items: center;
     opacity: 0;
 }
+#arrow_img{
+    height:100px;
+}
 #history1{
     top:10%;
 }
