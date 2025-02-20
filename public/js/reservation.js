@@ -10,7 +10,17 @@ window.addEventListener('DOMContentLoaded', () => {
         },
     });
 });
-//
-// document.querySelector(".clean_btn").addEventListener("click", function() {
-//     location.href="/reservation_main.html";
-// })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show"); // 요소가 보이면 show 추가
+            }
+        });
+    }, { threshold: 0.3 }); // 30% 이상 보이면 동작
+
+    // 감지할 요소 선택
+    const elements = document.querySelectorAll(".hidden");
+    elements.forEach(el => observer.observe(el));
+});

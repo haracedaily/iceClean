@@ -4,20 +4,31 @@
     box-sizing: border-box;
 }
 
-#container > #service_menu, #service_price, #service_trust, #img_slider {
+.hidden {
+    opacity: 0;
+    transform: translateY(30px); /* 아래에서 위로 */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#service_menu, #service_price, #service_trust, #img_slider {
     margin: 15px;
 }
 
-#container > #content > #img_main {
+#content > #img_main {
     position: relative;
     overflow: hidden;
     height: 60vh;
 }
 
-#container > #content > #img_main > img {
+#content > #img_main > img {
     position: absolute;
     object-fit: cover;
-    width:100vw;
+    width: 100vw;
     height: 100%;
     /*background-color: rgb(100, 100, 100);*/
     opacity: 0.8;
@@ -26,12 +37,25 @@
 .img_text {
     position: absolute;
     color: white;
-    /*font-size: clamp(16px, 2vw, 40px);*/
     line-height: 1.5;
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     white-space: nowrap;
-translate(50 px, 0);
+}
+
+.clean_btn {
+    position: absolute;
+    background-color: #1481e0;
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid #1481e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateX(33%);
+}
+
+.clean_btn:hover {
+    background-color: #85c6ff;
 }
 
 .down_img {
@@ -43,16 +67,17 @@ translate(50 px, 0);
     animation: motion 0.75s linear 0s infinite alternate;
 }
 
-#container > #sub_content {
-    position: relative;
+#sub_content {
+    display: flex;
+    gap: 20px;
     height: 300px;
     padding: 20px;
 }
 
-#container > #service_menu {
+#service_menu {
     position: relative;
     height: 400px;
-    width:100vw;
+    width: 100vw;
     background-color: rgb(245, 245, 245);
 }
 
@@ -62,7 +87,7 @@ translate(50 px, 0);
     margin: auto;
 }
 
-#container > #service_menu > .service_div > div {
+#service_menu > .service_div > div {
     margin: 10px 10px;
 }
 
@@ -70,13 +95,18 @@ translate(50 px, 0);
     display: flex;
 }
 
-#container > #service_menu > .service_div > div > div > img {
+#service_menu > .service_div > div > div > img {
     width: 80px;
     display: block;
     margin: auto;
 }
 
-.service_calendar {
+.service_calendar,
+.service_glasses,
+.service_evaluation,
+.trust_payment,
+.trust_insurance,
+.trust_customer {
     width: 500px;
     height: 200px;
     background-color: white;
@@ -84,31 +114,20 @@ translate(50 px, 0);
     border-radius: 10px;
 }
 
-.service_glasses {
-    width: 500px;
-    height: 200px;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 10px;
-}
-
-.service_evaluation {
-    width: 500px;
-    height: 200px;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 10px;
-}
 
 .sub_service_calendar,
 .sub_service_glasses,
-.sub_service_evaluation {
+.sub_service_evaluation,
+.sub_trust_payment,
+.sub_trust_insurance,
+.sub_trust_customer {
     margin: 10px 10px;
     height: 80px;
     white-space: nowrap;
 }
 
-#container > #service_trust > .trust_div > div > div > img {
+
+#service_trust > .trust_div > div > div > img {
     display: block;
     margin: 10px auto;
 }
@@ -131,9 +150,9 @@ thead {
     background-color: rgb(210, 210, 210);
 }
 
-#container > #service_trust {
+#service_trust {
     height: 350px;
-    width:100vw;
+    width: 100vw;
     background-color: rgb(245, 245, 245);
 }
 
@@ -153,39 +172,6 @@ thead {
     margin: auto;
 }
 
-.sub_trust_payment,
-.sub_trust_insurance,
-.sub_trust_customer {
-    margin: 10px;
-    height: 80px;
-    width: 220px;
-    white-space: nowrap;
-}
-
-.trust_payment {
-    width: 500px;
-    height: 200px;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 10px;
-}
-
-.trust_insurance {
-    width: 500px;
-    height: 200px;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 10px;
-}
-
-.trust_customer {
-    width: 500px;
-    height: 200px;
-    background-color: white;
-    border: 5px solid dimgray;
-    border-radius: 10px;
-}
-
 .payment,
 .insurance,
 .customer {
@@ -194,7 +180,7 @@ thead {
 
 }
 
-#container > #img_slider {
+#img_slider {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -204,10 +190,6 @@ thead {
 
 .sub_review {
     width: 100%;
-}
-
-.sub_review_div {
-    /*background-color: rgb(245, 245, 245);*/
 }
 
 .review_text {
@@ -221,7 +203,6 @@ thead {
 }
 
 .img_slide {
-    text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
@@ -236,36 +217,19 @@ thead {
     object-fit: cover;
 }
 
-/*애니메이션 테스트*/
-#container>#sub_content div {
-    animation: slide-in 1s ease-in-out;
-}
-
-@keyframes slide-in {
-    0%{
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0); /* rotate(270deg);*/
-        opacity: 1;
-    }
-}
-/*애니메이션 테스트*/
-
 @keyframes motion {
     0% {
-        margin-top: 0px;
+        transform: translateY(0);
     }
     100% {
-        margin-top: 12px;
+        transform: translateY(12px);
     }
 }
 
 @media screen and (max-width: 750px) {
     .img_text {
         position: absolute;
-        transform: translateX(28%);
+        transform: translateX(33%);
         top: 30%;
         line-height: 1.5;
         font-size: clamp(21px, 2.5vw, 40px);
@@ -275,35 +239,24 @@ thead {
     }
 
     .clean_btn {
-        position: absolute;
-        background-color: #1481e0;
-        color: white;
-        font-size: 1.2rem;
-        border: 2px solid #1481e0;
-        border-radius: 5px;
-        transform: translateX(33%);
+        transform: translateX(28%);
         top: 75%;
         width: 60%;
         height: 50px;
-    }
-
-    .clean_btn:hover {
-        background-color: #85c6ff;
-        cursor: pointer;
     }
 
     .sub_choice {
         position: absolute;
         left: 80px;
         padding-top: 50px;
-        font-size: clamp(15px, 2vw, 40px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     .sub_order {
         position: absolute;
         left: 80px;
         padding-top: 150px;
-        font-size: clamp(15px, 2vw, 40px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     .sub_customer {
@@ -311,7 +264,7 @@ thead {
         display: inline-block;
         left: 230px;
         padding-top: 150px;
-        font-size: clamp(15px, 2vw, 40px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     table, th, td {
@@ -334,35 +287,23 @@ thead {
     }
 
     .clean_btn {
-        position: absolute;
-        background-color: #1481e0;
-        color: white;
-        font-size: 1.2rem;
-        border: 2px solid #1481e0;
-        border-radius: 5px;
+        top: 80%;
         width: 300px;
         height: 50px;
-        transform: translateX(35%);
-        top: 80%;
-    }
-
-    .clean_btn:hover {
-        background-color: #85c6ff;
-        cursor: pointer;
     }
 
     .sub_choice {
         position: absolute;
         left: 80px;
         padding-top: 50px;
-        font-size: clamp(15px, 2vw, 20px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     .sub_order {
         position: absolute;
         left: 80px;
         padding-top: 180px;
-        font-size: clamp(15px, 2vw, 20px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     .sub_customer {
@@ -370,7 +311,7 @@ thead {
         display: inline-block;
         left: 300px;
         padding-top: 180px;
-        font-size: clamp(15px, 2vw, 20px);
+        font-size: clamp(14px, 1.5vw, 24px);
     }
 
     .service_div {
@@ -378,7 +319,7 @@ thead {
         margin: auto;
     }
 
-    #container > #service_price {
+    #service_price {
         display: flex;
     }
 
