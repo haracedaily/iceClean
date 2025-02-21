@@ -1,5 +1,3 @@
-/*import { googleTranslateElementInit } from "./common.js"*/
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -32,5 +30,3 @@ gsap.to("#subImg3", {
     },
     duration:2,opacity:1
 });
-
-/*googleTranslateElementInit();*/

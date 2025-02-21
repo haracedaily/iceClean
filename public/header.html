@@ -1,4 +1,3 @@
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <header>
     <nav>
@@ -28,19 +27,19 @@
                 <li>고객센터
                     <ul class="subMenu">
                         <li><a href="/center.html">1대1 문의</a></li>
-                        <li><a href="">자주 묻는 질문</a></li>
+                        <li><a href="/Q.html">자주 묻는 질문</a></li>
                     </ul>
                 </li>
 
             </ul>
         </div>
         <div>
-            <!--<div id="google-translate-element"></div>-->
-            <select name="" id="lang">
-                <option value="default">Language</option>
+            <select name="" id="lang" onchange="changeLang()">
+                <option value="">Language</option>
                 <option value="ko">Korean</option>
                 <option value="en">English</option>
             </select>
+
         </div>
 
     </nav>
@@ -73,6 +72,4 @@
         </div>
         <button id="pop_up_close_btn" onclick="closePopUp()">확인</button>
     </div>
-
 </div>
-

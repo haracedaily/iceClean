@@ -8,9 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!--<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollSmoother.min.js"></script>-->
 </head>
 <body>
 <!--<div id="smooth-wrapper">
@@ -39,43 +36,74 @@
                 <img src="/image/index3.png" alt="" style="width: 100%; z-index: -1; opacity: 0.6;">
             </section>
         </div>
+
     </main>
     <div data-include-path="/footer.html" class="$includePath"></div>
+<div id="google_translate_element"></div>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ko',
+            includedLanguages: 'ko,en',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="module" src="/public/js/common.js"></script>
 
-
-<!--    </div>
-</div>-->
     <script>
-        /*  layout();
-         function layout(){ DOM
-         }
-          | window*/
         let $bodyEl = document.querySelector('body');
         window.addEventListener("load",function(){
             let allElements = document.getElementsByClassName('$includePath');
             let includePath;
             let xhttp;
-            Array.prototype.forEach.call(allElements,function(el){
+            Array.prototype.forEach.call(allElements,async function (el) {
+
+
                 includePath = el.dataset.includePath;
-                if(includePath){
+                if (includePath) {
                     xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function(){
-                        if(this.readyState == 4 && this.status == 200){
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
                             el.outerHTML = this.responseText;
                         }
                     };
-                    xhttp.open('GET',includePath,true);
-                    xhttp.send();
+
+                    xhttp.open('GET', includePath, true);
+                    await xhttp.send();
+
                 }
             });
+
         });
 
         function closePopUp(){
             $bodyEl.classList.remove("scroll_lock");
             document.querySelector('#pop_up').style.display = 'none';
         }
+
+        function changeLang(){
+            let el = event.target;
+            if(!!el.value){
+
+                const tolang = el.value; // 변경할 언어 코드 얻기
+                const gtcombo = document.querySelector('.goog-te-combo');
+            console.log(gtcombo);
+                if (gtcombo == null) {
+                    //alert("Error: Could not find Google translate Combolist.");
+                    return false;
+                }
+                gtcombo.value = tolang; // 변경할 언어 적용
+                if(!!tolang) {
+                    gtcombo.dispatchEvent(new Event('change')); // 변경 이벤트 트리거
+                };
+            }
+            return false;
+        };
+
     </script>
 </body>
-<script type="module" src="/public/js/common.js"></script>
 <script type="module" src="/public/js/index.js"></script>
+
 </html>
