@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reserve {
+    padding-top: 10px;
+    background-color: bisque;
+}
+
+.reserve_title {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.reserve_div {
+    background-color: lightgoldenrodyellow;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.reserve_form{
+    display: flex;
+}
+
+.rf_detail{
+    display: flex;
+    background-color: lightgrey;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rf_subdetail{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+}
+
+.rf_input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+}

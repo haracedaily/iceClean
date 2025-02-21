@@ -185,7 +185,12 @@ thead {
     overflow: hidden;
     width: 100%;
     margin: 10px 10px;
-    cursor: pointer;
+    &:hover{
+        cursor: grab;
+        &:active{
+            cursor: grabbing;
+        }
+    }
 }
 
 .sub_review {
