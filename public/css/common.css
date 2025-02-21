@@ -296,13 +296,24 @@ footer section li {
 }
 /*화면 크기별 설정*/
 @media screen and (max-width:750px){
-    header nav>div>ul>li {
-        margin-right: 10px;
-        font-size: 0.8rem;
+    header nav>div>ul>li:nth-child(n+2) {
+        display:none;
+    }
+    #header_name {
+        font-size:1.2rem !important;
+    }
+    main{
+        padding-top:13vh;
+    }
+    #lang{
+        display:none;
     }
     header section li {
         font-size: 0.7rem;
         margin:3px;
+    }
+    .con_head li{
+        font-size:0.7rem !important;
     }
 
     footer nav li{
@@ -379,7 +390,7 @@ footer section li {
 iframe.goog-te-banner-frame { display: none !important; }
 .skiptranslate { display: none !important; }
 .goog-logo-link { display:none !important; }
-.goog-te-gadget { color: transparent !important; overflow: hidden;}
+.goog-te-gadget { display:none; color: transparent !important; overflow: hidden;}
 .goog-te-balloon-frame{display: none !important;}
 .goog-tooltip {display: none !important;}
 .goog-tooltip:hover {display: none !important;}

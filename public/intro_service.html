@@ -181,11 +181,10 @@
     </div>
 </main>
 <div data-include-path="/footer.html" class="$includePath"></div>
+<div id="google_translate_element"></div>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
-    /*  layout();
-     function layout(){ DOM
-     }
-      | window*/
+    let $bodyEl = document.querySelector('body');
     window.addEventListener("load", function () {
         let allElements = document.getElementsByClassName('$includePath');
         let includePath;
@@ -203,7 +202,41 @@
                 xhttp.send();
             }
         });
+        if(document.querySelector('.goog-te-combo')==null) {
+            googleTranslateElementInit();
+        }
     });
+
+
+    function closePopUp(){
+        $bodyEl.classList.remove("scroll_lock");
+        document.querySelector('#pop_up').style.display = 'none';
+    }
+    function changeLang(){
+        let el = event.target;
+        if(!!el.value){
+
+            const tolang = el.value; // 변경할 언어 코드 얻기
+            const gtcombo = document.querySelector('.goog-te-combo');
+            console.log(gtcombo);
+            if (gtcombo == null) {
+                return false;
+            }
+            gtcombo.value = tolang; // 변경할 언어 적용
+            if(!!tolang) {
+                gtcombo.dispatchEvent(new Event('change')); // 변경 이벤트 트리거
+            };
+        }
+        return false;
+    };
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ko',
+            includedLanguages: 'ko,en',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
 </script>
 </body>
 </html>
