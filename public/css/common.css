@@ -82,7 +82,7 @@ header nav>div>ul{
     padding-top:10px;
 }
 header nav>div>ul>li {
-    width:150px;
+    min-width:150px;
     font-size: 1.4rem;
     overflow: visible;
     position:relative;

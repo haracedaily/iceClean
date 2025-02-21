@@ -1,5 +1,3 @@
-/*import { googleTranslateElementInit } from "./common.js"*/
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -32,24 +30,3 @@ gsap.to("#subImg3", {
     },
     duration:2,opacity:1
 });
-
-window.addEventListener("DOMContentLoaded", () => {
-    console.log(document.querySelector('#lang'));
-    document.querySelector('#lang').addEventListener('change',function(event) {
-        console.log(event);
-        let el = event.target;
-        if(!!el.value){
-
-            const tolang = el.value; // 변경할 언어 코드 얻기
-            const gtcombo = document.querySelector('.goog-te-combo');
-            if (gtcombo == null) {
-                //alert("Error: Could not find Google translate Combolist.");
-                return false;
-            }
-            gtcombo.value = tolang; // 변경할 언어 적용
-            gtcombo.dispatchEvent(new Event('change')); // 변경 이벤트 트리거
-        }
-        return false;
-    });
-})
-/*googleTranslateElementInit();*/
