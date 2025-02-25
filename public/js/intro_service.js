@@ -49,8 +49,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 window.addEventListener("DOMContentLoaded", function() {
-    let $upBtn = document.querySelector("#upBtn");
-    let $downBtn = document.querySelector("#downBtn");
+
 
     gsap.to("#poster_img1", {//타겟 되는 요소
         scrollTrigger: {
@@ -91,17 +90,6 @@ window.addEventListener("DOMContentLoaded", function() {
         duration:0.1,background:'#64FF64'
     });
 
-window.addEventListener("scroll", scrollTrigger);
 
-    function scrollTrigger() {
-        var sc = document.body.clientHeight - window.innerHeight - document.documentElement.scrollTop;
-        if (sc < 0.2) {
-            $downBtn.classList.add("none");
-            $upBtn.classList.remove("none");
-        }else{
-            $downBtn.classList.remove("none");
-            $upBtn.classList.add("none");
-        }
-    }
 });
 

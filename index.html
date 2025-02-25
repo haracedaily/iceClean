@@ -40,27 +40,17 @@
     </main>
     <div data-include-path="/footer.html" class="$includePath"></div>
 <div id="google_translate_element"></div>
-<script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'ko',
-            includedLanguages: 'ko,en',
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-</script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="module" src="/public/js/common.js"></script>
-
     <script>
         let $bodyEl = document.querySelector('body');
+
+
         window.addEventListener("load",function(){
             let allElements = document.getElementsByClassName('$includePath');
             let includePath;
             let xhttp;
             Array.prototype.forEach.call(allElements,async function (el) {
-
-
                 includePath = el.dataset.includePath;
                 if (includePath) {
                     xhttp = new XMLHttpRequest();
@@ -69,10 +59,8 @@
                             el.outerHTML = this.responseText;
                         }
                     };
-
                     xhttp.open('GET', includePath, true);
                     await xhttp.send();
-
                 }
             });
 
@@ -86,7 +74,9 @@
         function changeLang(){
             let el = event.target;
             if(!!el.value){
-
+                if(document.querySelector('.goog-te-combo')==null) {
+                    googleTranslateElementInit();
+                }
                 const tolang = el.value; // 변경할 언어 코드 얻기
                 const gtcombo = document.querySelector('.goog-te-combo');
             console.log(gtcombo);
@@ -101,6 +91,13 @@
             }
             return false;
         };
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',
+                includedLanguages: 'en,ko',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
 
     </script>
 </body>

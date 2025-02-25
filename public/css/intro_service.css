@@ -135,7 +135,7 @@ main .container .con_head li:first-child{
     top:50vh;
     right:10vh;
     transition-duration:500ms;
-    z-index:999;
+    z-index:200;
 }
 .arrowBtn:hover{
     cursor:pointer;
