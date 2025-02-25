@@ -86,9 +86,7 @@
                     xhttp.send();
                 }
             });
-            if(document.querySelector('.goog-te-combo')==null) {
-                googleTranslateElementInit();
-            }
+
         });
 
 
@@ -99,7 +97,9 @@
         function changeLang(){
             let el = event.target;
             if(!!el.value){
-
+                if(document.querySelector('.goog-te-combo')==null) {
+                    googleTranslateElementInit();
+                }
                 const tolang = el.value; // 변경할 언어 코드 얻기
                 const gtcombo = document.querySelector('.goog-te-combo');
                 console.log(gtcombo);

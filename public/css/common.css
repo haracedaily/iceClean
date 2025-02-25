@@ -199,6 +199,12 @@ header section .subMenu{
     visibility: hidden;
     
 }
+#burger_menu{
+    display:none;
+}
+#burger_menu:hover{
+    cursor:pointer;
+}
 footer{
     flex-basis: 15vh;
     display:flex;
@@ -295,7 +301,7 @@ footer section li {
     display:none;
 }
 /*화면 크기별 설정*/
-@media screen and (max-width:750px){
+@media screen and (max-width:900px){
     header nav>div>ul>li:nth-child(n+2) {
         display:none;
     }
@@ -303,10 +309,13 @@ footer section li {
         font-size:1.2rem !important;
     }
     main{
-        padding-top:13vh;
+        padding-top:30vh;
     }
     #lang{
         display:none;
+    }
+    #burger_menu{
+        display:block;
     }
     header section li {
         font-size: 0.7rem;

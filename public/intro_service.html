@@ -39,7 +39,7 @@
                     <img src="/image/poster.png" width="30%" alt="" style="filter:brightness(1.2);">
                     <div class="poster_txt">
 
-                        <h1><span style="color:black;">배너</span> 및 <span style="color:black;">포스터</span> 증정</h1>
+                        <h1>배너 <span style="color:black;">및</span> 포스터 <span style="color:black;">증정</span></h1>
                         <p>정기구독을 통해 홍보해보세요.</p>
 
 
@@ -202,9 +202,7 @@
                 xhttp.send();
             }
         });
-        if(document.querySelector('.goog-te-combo')==null) {
-            googleTranslateElementInit();
-        }
+
     });
 
 
@@ -215,7 +213,9 @@
     function changeLang(){
         let el = event.target;
         if(!!el.value){
-
+            if(document.querySelector('.goog-te-combo')==null) {
+                googleTranslateElementInit();
+            }
             const tolang = el.value; // 변경할 언어 코드 얻기
             const gtcombo = document.querySelector('.goog-te-combo');
             console.log(gtcombo);
