@@ -7,7 +7,7 @@
 .reserve {
     background-color: lightskyblue;
     padding-top: 10px;
-    height: 1000px;
+    height: 1200px;
 }
 
 .reserve_title {
@@ -19,7 +19,7 @@
 .reserve_div {
     background-color: white;
     width: 1200px;
-    height: 700px;
+    height: 950px;
     border-radius: 5px;
     margin: auto;
     padding: 30px;
@@ -34,28 +34,77 @@
     display: flex;
     background-color: lightskyblue;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 300px;
     height: 70px;
+    font-weight: bold;
     align-items: center;
     justify-content: center;
 }
 
 .rf_subdetail {
     border: 1px solid grey;
-    border-radius: 5px;
+    box-shadow: 1px 1px 1px lightgrey;
+    border-radius: 10px;
     width: 1000px;
     display: flex;
     align-items: center;
-    padding-left: 2vh;
+    padding-left: 1vh;
     margin-left: 1vh;
 }
 
 .rf_input {
     border: 1px solid grey;
-    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgrey;
+    border-radius: 10px;
     width: 250px;
     height: 35px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rf_input:focus{
+    border: 5px solid lightsteelblue;
+    outline: none;
+}
+
+.address_btn{
+    border: 1px solid lightskyblue;
+    background-color: lightskyblue;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+select{
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.rf_dateTime{
+    border: 1px solid grey;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: inline;
+}
+
+.rf_question_main{
+    height: 100px;
+}
+
+.rf_question{
+    width: 98%;
+    height: 80%;
+    resize: none;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .confirm_btn {
@@ -66,12 +115,6 @@
     width: 150px;
     height: 70px;
     margin: auto;
-}
-
-.rf_dateTime{
-    border: 1px solid grey;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: inline;
+    cursor: pointer;
+    margin-top: 25px;
 }
