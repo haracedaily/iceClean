@@ -1,6 +1,10 @@
-document.querySelector(".fix_btn").addEventListener("click", function() {
-    location.href="/reservation.html";
-})
+let $fixBtn = document.querySelector(".fix_btn");
+if(!!$fixBtn) {
+$fixBtn.addEventListener("click", function() {
+        location.href="/reservation.html";
+    })
+}
+
 window.addEventListener("load", function() {
     let $upBtn = document.querySelector("#upBtn");
     let $downBtn = document.querySelector("#downBtn");
