@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
         }else{
             header_nav.style.backgroundColor="rgba(0,0,0,0.6)";
             header_nav.style.color="white";
-            header_lang.style.color="white";
+            header_lang.style.color="gray";
             header_name.children[0].style.color="white";
         }
         if($downBtn!=null) {
