@@ -49,8 +49,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 window.addEventListener("DOMContentLoaded", function() {
-    let $upBtn = document.querySelector("#upBtn");
-    let $downBtn = document.querySelector("#downBtn");
+
 
     gsap.to("#poster_img1", {//타겟 되는 요소
         scrollTrigger: {

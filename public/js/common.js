@@ -2,6 +2,8 @@ document.querySelector(".fix_btn").addEventListener("click", function() {
     location.href="/reservation.html";
 })
 window.addEventListener("load", function() {
+    let $upBtn = document.querySelector("#upBtn");
+    let $downBtn = document.querySelector("#downBtn");
     window.addEventListener("scroll", scrollTrigger);
 
     function scrollTrigger() {
@@ -19,13 +21,15 @@ window.addEventListener("load", function() {
             header_lang.style.color="white";
             header_name.children[0].style.color="white";
         }
-        var sc = document.body.clientHeight - window.innerHeight - document.documentElement.scrollTop;
-        if (sc < 0.3) {
-            $downBtn.classList.add("none");
-            $upBtn.classList.remove("none");
-        }else{
-            $downBtn.classList.remove("none");
-            $upBtn.classList.add("none");
+        if($downBtn!=null) {
+            var sc = document.body.clientHeight - window.innerHeight - document.documentElement.scrollTop;
+            if (sc < 0.3) {
+                $downBtn.classList.add("none");
+                $upBtn.classList.remove("none");
+            } else {
+                $downBtn.classList.remove("none");
+                $upBtn.classList.add("none");
+            }
         }
     }
 })
