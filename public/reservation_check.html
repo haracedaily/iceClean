@@ -76,8 +76,7 @@
                     <label>예약자 주소</label>
                 </div>
                 <div class="rf_subdetail">
-                    <input type="text" name="" id="address" class="rf_input" style="width: 500px;">
-                    <button onclick="searchAddress()" class="address_btn">주소 찾기</button>
+                    <input type="text" name="" id="address" class="rf_input" style="width: 400px;">
                 </div>
             </div>
 
@@ -86,12 +85,7 @@
                     <label>제빙기 스펙</label>
                 </div>
                 <div class="rf_subdetail">
-                    <select>
-                        <option>제빙기 선택</option>
-                        <option>소형: 제빙기 50kg 미만</option>
-                        <option>중형: 제빙기 100kg 미만</option>
-                        <option>대형: 제빙기 200kg 미만</option>
-                    </select>
+                    <p>소형: 제빙기 50kg 미만</p>
                 </div>
             </div>
 
@@ -110,14 +104,7 @@
                     <label>제빙기 청소시간</label>
                 </div>
                 <div class="rf_subdetail">
-                    <select>
-                        <option>시간선택</option>
-                        <option>오전8시~10시사이</option>
-                        <option>오전10시~정오사이</option>
-                        <option>정오~오후2시사이</option>
-                        <option>오후2시~4시사이</option>
-                        <option>오후4시~6시사이</option>
-                    </select>
+                    <p>오후2시~4시사이</p>
                 </div>
             </div>
 
@@ -131,10 +118,9 @@
             </div>
 
             <div class="reserve_form">
-                <button class="confirm_btn" id="check-reserve" onclick="location.href='reservation_check.html'">다시조회</button>
+                <button class="confirm_btn" id="reset-reserve">다시조회</button>
             </div>
         </div>
-
     </div>
 </main>
 <div data-include-path="footer.html" class="$includePath"></div>
@@ -159,6 +145,6 @@
     });
 </script>
 <script src="/js/reservation.js"></script>
+<script src="/js/reservation_check.js"></script>
 </body>
 </html>
-<script src="/js/reservation_main.js"></script>
