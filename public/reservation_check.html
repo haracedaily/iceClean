@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/reservation.css">
-    <link rel="stylesheet" href="/css/reservation_main.css">
+    <link rel="stylesheet" href="/css/reservation_check.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -19,8 +18,8 @@
 <main>
     <div class="reserve">
         <div class="reserve_title">
-            <h1>예약하기</h1>
-            <h4>Reservation</h4>
+            <h1>예약확인</h1>
+            <h4>Reservation confirmation</h4>
         </div>
         <div class="reserve_div" id="step01">
             <div class="reserve_form">
@@ -41,8 +40,31 @@
             </div>
 
             <div class="reserve_form">
+                <button class="confirm_btn" id="confirm-reserve">예약확인</button>
+            </div>
+        </div>
+
+        <div class="reserve_div" id="step02">
+            <div class="reserve_form">
                 <div class="rf_detail">
-                    <label>이메일</label>
+                    <label>예약자 상호명(이름)</label>
+                </div>
+                <div class="rf_subdetail">
+                    <input type="text" name="" id="r-name" class="rf_input">
+                </div>
+            </div>
+            <div class="reserve_form">
+                <div class="rf_detail">
+                    <label>예약자 연락처</label>
+                </div>
+                <div class="rf_subdetail">
+                    <input type="text" name="" id="r-phone" class="rf_input" placeholder="010-1234-5678">
+                </div>
+            </div>
+
+            <div class="reserve_form">
+                <div class="rf_detail">
+                    <label>예약자 이메일</label>
                 </div>
                 <div class="rf_subdetail">
                     <input type="text" name="" id="email" class="rf_input" placeholder="Icemaker@gmail.com">
@@ -51,7 +73,7 @@
 
             <div class="reserve_form">
                 <div class="rf_detail">
-                    <label>주소</label>
+                    <label>예약자 주소</label>
                 </div>
                 <div class="rf_subdetail">
                     <input type="text" name="" id="address" class="rf_input" style="width: 500px;">
@@ -75,7 +97,7 @@
 
             <div class="reserve_form">
                 <div class="rf_detail">
-                    <label>희망날짜</label>
+                    <label>이용날짜</label>
                 </div>
                 <div class="rf_subdetail">
                     <input type="date" name="" id="dateTime" class="rf_input rf_dateTime">
@@ -85,7 +107,7 @@
 
             <div class="reserve_form">
                 <div class="rf_detail">
-                    <label>시간</label>
+                    <label>제빙기 청소시간</label>
                 </div>
                 <div class="rf_subdetail">
                     <select>
@@ -109,10 +131,10 @@
             </div>
 
             <div class="reserve_form">
-                <button class="confirm_btn" id="confirm-reserve">예약하기</button>
-                <button class="check_btn" id="check-reserve" onclick="location.href='reservation_check.html'">예약확인</button>
+                <button class="confirm_btn" id="check-reserve" onclick="location.href='reservation_check.html'">다시조회</button>
             </div>
         </div>
+
     </div>
 </main>
 <div data-include-path="footer.html" class="$includePath"></div>
