@@ -54,7 +54,7 @@
                     <label>주소</label>
                 </div>
                 <div class="rf_subdetail">
-                    <input type="text" name="" id="address" class="rf_input">
+                    <input type="text" name="" id="address" class="rf_input" style="width: 500px;">
                     <button onclick="searchAddress()" class="address_btn">주소 찾기</button>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="rf_subdetail">
                     <select>
-                        <option>제빙기 스펙선택</option>
+                        <option>제빙기 선택</option>
                         <option>소형: 제빙기 50kg 미만</option>
                         <option>중형: 제빙기 100kg 미만</option>
                         <option>대형: 제빙기 200kg 미만</option>
@@ -138,29 +138,4 @@
 <script src="/js/reservation.js"></script>
 </body>
 </html>
-
-<script>
-    // DOMContentLoaded 사용하면 html 다 불러와 지고 나서 함수 실행
-    document.addEventListener("DOMContentLoaded", function () {
-        flatpickr("#rf_dateTime", {
-            dateFormat: "Y-m-d"
-        });
-        flatpickr("#dateTime", {
-            dateFormat: "Y-m-d"
-        });
-    });
-</script>
-
-<script>
-    document.getElementById('dateTime').value = new Date().toISOString().substring(0, 10);
-</script>
-
-<script>
-    function searchAddress() {
-        new daum.Postcode({
-            oncomplete: function(data) {
-                document.getElementById("address").value = data.address;
-            }
-        }).open();
-    }
-</script>
+<script src="/js/reservation_main.js"></script>
