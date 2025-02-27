@@ -1,3 +1,5 @@
+const $submitReserve = document.querySelector('#submit-reserve');
+
 function searchAddress() {
     new daum.Postcode({
         oncomplete: function (data) {
@@ -18,3 +20,11 @@ function searchAddress() {
         }
     }).open();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    flatpickr("#use-date", {
+        dateFormat: "Y-m-d"
+    });
+});
+
+document.getElementById("use-date").valueAsDate = new Date();
