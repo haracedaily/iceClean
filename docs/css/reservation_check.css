@@ -8,10 +8,10 @@
     display: none;
 }
 .reserve {
-    background-color: lightskyblue;
+    background-image: url(../image/ssy_clean.jpg);
+    background-repeat: repeat;
     min-height: 80vh;
     padding-bottom: 10vh;
-    padding-top: 10px;
 }
 
 .reserve_title {
