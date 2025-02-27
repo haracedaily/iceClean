@@ -218,13 +218,14 @@
             let answer = container.nextElementSibling;
 
             question.addEventListener("click", function () {
+                answer.classList.toggle("answerSelected");
                 document.querySelectorAll(".answer").forEach(function (ans) {
                     ans.style.display = "none";
                 });
 
-                if (answer.style.display === "none" || answer.style.display === "") {
+                if (answer.classList.length>1) {
                     answer.style.display = "block";
-                } else if(answer.style.display != "none") {
+                } else {
                     answer.style.display = "none";
                 }
             });
