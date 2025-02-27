@@ -224,7 +224,7 @@
 
                 if (answer.style.display === "none" || answer.style.display === "") {
                     answer.style.display = "block";
-                } else {
+                } else if(answer.style.display != "none") {
                     answer.style.display = "none";
                 }
             });
