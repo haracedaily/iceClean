@@ -1,7 +1,7 @@
 let $fixBtn = document.querySelector(".fix_btn");
 if(!!$fixBtn) {
 $fixBtn.addEventListener("click", function() {
-        location.href="/reservation.html";
+        location.href="./reservation.html";
     })
 }
 
