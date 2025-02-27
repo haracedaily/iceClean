@@ -5,19 +5,19 @@
 }
 
 .reserve {
-    /*padding-top: 10px;*/
-    height: 1200px;
     background-image: url(../image/ssy_clean.jpg);
     background-repeat: repeat;
-    /*object-fit: cover;*/
+    min-height: 80vh;
+    padding-bottom: 10vh;
 }
 
 .reserve_title {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5vh;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
 .reserve_div {
     background-color: white;
     width: 1200px;
