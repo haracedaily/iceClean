@@ -73,6 +73,11 @@
     outline: none;
 }
 
+.rf_question{
+    width: 100%;
+    resize: none;
+}
+
 .confirm_btn {
     border: 1px solid lightskyblue;
     background-color: lightskyblue;

@@ -5,9 +5,11 @@
 }
 
 .reserve {
-    background-color: lightskyblue;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     height: 1200px;
+    background-image: url(../image/ssy_clean.jpg);
+    background-repeat: repeat;
+    /*object-fit: cover;*/
 }
 
 .reserve_title {
@@ -85,14 +87,16 @@ select{
     height: 35px;
     padding-left: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .rf_dateTime{
     border: 1px solid grey;
+    cursor: pointer;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: inline;
+    display: none;
 }
 
 .rf_question_main{
