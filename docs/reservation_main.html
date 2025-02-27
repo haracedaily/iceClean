@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/reservation.css">
-    <link rel="stylesheet" href="/css/reservation_main.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reservation.css">
+    <link rel="stylesheet" href="./css/reservation_main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<div data-include-path="header.html" class="$includePath"></div>
+<div data-include-path="./header.html" class="$includePath"></div>
 <main>
     <div class="reserve">
         <div class="reserve_title">
@@ -79,7 +79,7 @@
                 </div>
                 <div class="rf_subdetail">
                     <input type="date" name="" id="dateTime" class="rf_input rf_dateTime">
-                    <img src="image/ssy_calendar2.png" alt="달력이미지" style="width: 40px; margin-left: 5px">
+                    <img src="./image/ssy_calendar2.png" alt="달력이미지" style="width: 40px; margin-left: 5px">
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
         </div>
     </div>
 </main>
-<div data-include-path="footer.html" class="$includePath"></div>
+<div data-include-path="./footer.html" class="$includePath"></div>
 <script>
     window.addEventListener("load", function () {
         let allElements = document.getElementsByClassName('$includePath');
@@ -137,8 +137,8 @@
         });
     });
 </script>
-<script src="/js/reservation.js"></script>
-<script src="/js/reservation_main.js"></script>
-<script src="/js/common.js"></script>
+<script src="./js/reservation.js"></script>
+<script src="./js/reservation_main.js"></script>
+<script src="./js/common.js"></script>
 </body>
 </html>
