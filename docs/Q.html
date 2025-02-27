@@ -29,12 +29,12 @@
       font-size: 14px;
     }
     .faq {
-      max-width: 1200px;
+      width:60%;
       margin: auto;
       padding: 20px;
       display: grid;
-      grid-template-columns: repeat(3, 27%);
-      gap: 15px;
+      grid-template-columns: repeat(3, 33%);
+      gap: 10px;
     }
     .question-card {
       display: flex;
@@ -43,7 +43,7 @@
       width: 65%;
       gap:1.5em;
       padding: 12px;
-      padding-left:1.5vw;
+      padding-left:1vw;
       border: 1px solid #ddd;
       background-color: #fff;
       border-radius: 10px;
@@ -74,6 +74,7 @@
       padding: 20px;
       width: 400px;
       z-index: 1000;
+      text-align:left;
     }
     .modal img {
       vertical-align: middle;
@@ -94,7 +95,9 @@
 
 <div data-include-path="./header.html" class="$includePath"></div>
 
-<main>
+<main style="display:flex; flex-direction: column;  justify-content: center;">
+  <h1>자주 묻는 질문</h1>
+
   <div class="categories">
     <div class="category">전체</div>
     <div class="category">계정 관리</div>
@@ -102,6 +105,7 @@
     <div class="category">이용 제한</div>
     <div class="category">결제·환불</div>
   </div>
+  <div class="test_faq">
   <div class="faq">
     <div class="question-card" onclick="openModal('예약시간 변경 문의', '예약 시간 변경은 담당 기사님과 조율 가능합니다.')">
       <strong>Q 예약시간 변경 문의</strong>
@@ -128,12 +132,14 @@
       <div class="tag">#수수료</div>
     </div>
   </div>
+  </div>
 </main>
 
 <div data-include-path="./footer.html" class="$includePath"></div>
 
 <div id="modal" class="modal">
-  <img src="./image/q.png" alt="Q"> <strong id="modal-question"></strong>
+  <img src="./image/q.png" alt="Q" width="13"> <strong id="modal-question"></strong>
+  <br>
   <br>
   <img src="./image/A.png" alt="A"> <span id="modal-answer"></span>
 </div>

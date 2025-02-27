@@ -219,7 +219,6 @@ footer{
     padding-left:10vw;
 }*/
 footer nav ul{
-
     display:flex;
 }
 footer nav li{
@@ -242,6 +241,9 @@ footer section{
     /*padding-left:10vw;*/
     color:white;
     font-size:0.7rem;
+}
+footer section ul {
+    text-align:left;
 }
 footer section li {
     padding:1.5px;
