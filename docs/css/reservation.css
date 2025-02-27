@@ -193,6 +193,13 @@ thead {
     }
 }
 
+.top_btn {
+    text-align: center;
+    cursor: pointer;
+    justify-items: center;
+    padding: 10px;
+}
+
 .sub_review {
     width: 100%;
 }
