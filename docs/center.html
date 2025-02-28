@@ -16,10 +16,11 @@
         /*}*/
 
         #page {
-            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
+            gap: 3em;
         }
 
         #page h1 {
@@ -122,6 +123,13 @@
         .fix_btn {
             margin-top: 20px;
         }
+        .center_inner_title{
+            height: 164px;
+            background-color: lightskyblue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -130,8 +138,9 @@
 
 <main>
     <div id="page">
+        <div class="center_inner_title">
         <h1>1대 1 문의</h1>
-        <hr>
+        </div>
         <div class="w-[800px]">
             <div class="question-container">
                 <div class="question"><img src="./image/q.png" alt="">비밀글</div>
@@ -218,6 +227,7 @@
                 </div>
             </div>
         </div>
+        <div></div>
     </div>
 
     <div>
