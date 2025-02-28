@@ -36,6 +36,7 @@ main .container .con_head li:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     min-height:40vh;
+    margin-bottom:2em;
 }
 .intro_tap{
     position:relative;
