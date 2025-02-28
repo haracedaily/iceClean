@@ -28,7 +28,14 @@ main .container .con_head li:first-child{
     font-size:1.1rem;
     font-weight:bold;
 }
-
+#main_img{
+    background-image:url(../images/icemaker.png);
+    background-color:white;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .history_texture{
     position:absolute;
    display:flex;
