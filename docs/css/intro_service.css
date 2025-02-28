@@ -28,6 +28,15 @@ main .container .con_head li:first-child{
     font-size:1.1rem;
     font-weight:bold;
 }
+#main_img{
+    background-image:url(../image/icemaker.png);
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:40vh;
+}
 .intro_tap{
     position:relative;
 
