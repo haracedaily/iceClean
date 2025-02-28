@@ -55,7 +55,7 @@
     }
     .question-card .tag {
       display: inline-block;
-      background-color: #4caf50;
+      background-color: lightskyblue;
       color: white;
       padding: 4px 14px;
       border-radius: 15px;
@@ -89,22 +89,29 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 999;
     }
+    .center_inner_title{
+      height: 30vh;
+      background-color: lightskyblue;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
 
 <div data-include-path="./header.html" class="$includePath"></div>
 
-<main style="display:flex; flex-direction: column;  justify-content: space-around;">
-  <div>
+<main style="display:flex; flex-direction: column;  justify-content: space-between; gap: 3em; align-items: center;">
+  <div class="center_inner_title">
   <h1>자주 묻는 질문</h1>
+  </div>
   <div class="categories">
     <div class="category">전체</div>
     <div class="category">계정 관리</div>
     <div class="category">도용·보안</div>
     <div class="category">이용 제한</div>
     <div class="category">결제·환불</div>
-  </div>
   </div>
   <div class="test_faq">
   <div class="faq">
