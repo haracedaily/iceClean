@@ -28,3 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("use-date").valueAsDate = new Date();
+
+
+$submitReserve.addEventListener('click', async function (e) {
+    alert('예약되었습니다.');
+})
