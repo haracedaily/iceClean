@@ -29,12 +29,13 @@ main .container .con_head li:first-child{
     font-weight:bold;
 }
 #main_img{
-    background-image:url(../images/icemaker.png);
+    background-image:url(../image/icemaker.png);
     background-color:white;
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height:50vh;
 }
 .history_texture{
     position:absolute;
