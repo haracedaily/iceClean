@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     <!-- Initialize Swiper -->
-    if(!!Swiper) {
+    if(Swiper != undefined) {
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 30,
