@@ -87,7 +87,20 @@
             text-align: center;
             margin-top: 10px;
         }
-
+        .pagination_btn_group{
+            display: flex;
+            justify-content: space-around;
+        }
+        .pagination_prbtn{
+            width: 3%;
+        }
+        .pagination_pbtn_group{
+            display: flex;
+            justify-content: space-around;
+        }
+        .pagination_pbtn{
+            width: 5%;
+        }
         .fix_btn {
             margin-top: 20px;
         }
@@ -160,23 +173,27 @@
             취소 관련하여 고객님께서 등록하신 메신저로 연락 남겨드리겠습니다. 감사합니다.</span></div>
 
 
-            <div class="PaginationNavstyle__Buttons-sc-1ye3koq-0 jDoiya">
-                <button class="PaginationNavstyle__ArrowEnd-sc-1ye3koq-2 fWEGtA start" aria-label="처음 페이지"></button>
-                <button class="PaginationNavstyle__Arrow-sc-1ye3koq-3 drGwOp prev" aria-label="이전 페이지"></button>
-                <span class="PaginationNavstyle__PageButtonContainer-sc-1ye3koq-1 fchhWP"><button
-                        data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC"><font
-                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></button><button
-                        data-testid="page-active" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 iGiYtR"><font
-                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></button><button
-                        data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC"><font
-                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></button><button
-                        data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC"><font
-                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></button><button
-                        data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC"><font
-                        style="vertical-align: inherit;"><font
-                        style="vertical-align: inherit;">5</font></font></button></span>
-                <button class="PaginationNavstyle__Arrow-sc-1ye3koq-3 drGwOp next" aria-label="다음 페이지"></button>
-                <button class="PaginationNavstyle__ArrowEnd-sc-1ye3koq-2 fWEGtA last" aria-label="마지막 페이지"></button>
+            <div class="PaginationNavstyle__Buttons-sc-1ye3koq-0 jDoiya pagination_btn_group">
+                <button class="PaginationNavstyle__ArrowEnd-sc-1ye3koq-2 fWEGtA start pagination_prbtn" aria-label="처음 페이지"></button>
+                <button class="PaginationNavstyle__Arrow-sc-1ye3koq-3 drGwOp prev pagination_prbtn" aria-label="이전 페이지"></button>
+                <span class="PaginationNavstyle__PageButtonContainer-sc-1ye3koq-1 fchhWP pagination_pbtn_group">
+                    <button data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC pagination_pbtn">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font>
+                    </button>
+                    <button data-testid="page-active" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 iGiYtR pagination_pbtn">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font>
+                    </button>
+                    <button data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC pagination_pbtn">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font>
+                    </button>
+                    <button data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC pagination_pbtn">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font>
+                    </button>
+                    <button data-testid="page-inactive" class="PaginationNavstyle__PageButton-sc-1ye3koq-4 bmLFIC pagination_pbtn">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></button>
+                </span>
+                <button class="PaginationNavstyle__Arrow-sc-1ye3koq-3 drGwOp next pagination_prbtn" aria-label="다음 페이지"></button>
+                <button class="PaginationNavstyle__ArrowEnd-sc-1ye3koq-2 fWEGtA last pagination_prbtn" aria-label="마지막 페이지"></button>
             </div>
         </div>
     </div>
