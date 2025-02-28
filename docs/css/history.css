@@ -50,3 +50,36 @@ main .container .con_head li:first-child{
 #history4{
     top: 70%;
 }
+
+@media screen and (min-height : 1100px) {
+    #arrow_img{
+        height:700px;
+    }
+    #history1{
+        opacity:1;
+    }
+    #history1_line{
+        width:20px;
+    }
+    #history2{
+        opacity:1;
+    }
+    #history2_line{
+        width:20px;
+    }
+    #history3{
+        opacity:1;
+    }
+    #history3_line{
+        width:20px;
+    }
+    #history4{
+        opacity:1;
+    }
+    #history4_line{
+        width:20px;
+    }
+    #profile_img{
+        opacity:1;
+    }
+}
