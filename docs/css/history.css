@@ -30,7 +30,7 @@ main .container .con_head li:first-child{
 }
 #main_img{
     background-image:url(../image/icemaker.png);
-    background-color:white;
+    background-color:rgba(255,255,255,0.6);
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
