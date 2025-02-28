@@ -109,6 +109,9 @@ header nav>div>ul>li:first-child a{
 header nav>div>ul>li:first-child a:visited:hover {
     cursor:pointer;
 }
+#lang{
+    width:auto !important;
+}
 /*header nav>div>ul>li:first-child a:visited:hover img{
     background-color: rgba(60,200,255,1);
 }*/
