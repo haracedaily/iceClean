@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", function() {
             end:"100 center",
             scrub: 2
         },
-        duration:0.1,background:'#64FF64'
+        duration:0.1,background:'#34e834'
     });
 
 
